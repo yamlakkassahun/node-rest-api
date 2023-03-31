@@ -1,0 +1,35 @@
+{
+  "name": "zion",
+  "version": "1.0.0",
+  "description": "zion",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev node dist/app.js",
+    "dev": "cross-env NODE_ENV=dev nodemon src/app.ts",
+    "stage": "cross-env NODE_ENV=stage nodemon src/app.ts",
+    "prod": "cross-env NODE_ENV=prod nodemon dist/app.js",
+    "build": "tsc"
+  },
+  "author": "Yamlak Kassahun",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.2",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "ts-node": "^10.9.1"
+  }
+}
