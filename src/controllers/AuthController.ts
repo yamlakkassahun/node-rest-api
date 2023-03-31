@@ -9,7 +9,6 @@ import { plainToClass } from 'class-transformer';
 
 export class AuthController {
     public async registerUser(req: Request, res: Response, next: NextFunction): Promise<void> {
-        
         //this will convert the input to class
         const userInput = plainToClass(UserDTO, req.body); 
         const inputErrors = await validate(userInput, { validationError: { target: false } });
@@ -20,6 +19,7 @@ export class AuthController {
 
         //get user input
         const { email, password, username } = req.body;
+
         try {
             //hashing password
             const hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10))
